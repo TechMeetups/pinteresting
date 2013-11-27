@@ -8,8 +8,8 @@
       </div>
       <div class="panel-body">
         <p><i>'<%= @pin.description %>'</i></p>
-        <p><span class="glyphicon glyphicon-upload"></span> <%= @pin.user.name%></p>
-
+        <p><span class="glyphicon glyphicon-upload"></span> 
+          <strong> <%= @pin.user.name if @pin.user %> </strong><br/>
         <% if @pin.user == current_user %>
           <%= link_to edit_pin_path(@pin) do %>
             <span class="glyphicon glyphicon-edit"></span>
